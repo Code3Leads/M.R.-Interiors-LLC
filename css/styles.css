@@ -1138,11 +1138,31 @@ footer hr{
 
     nav ul{
 
-        flex-direction:column;
+    display:grid;
 
-        gap:12px;
+    grid-template-columns:repeat(2,1fr);
 
-    }
+    gap:12px 20px;
+
+    justify-items:center;
+
+    width:100%;
+
+}
+
+nav ul li{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+nav ul li:last-child{
+
+    grid-column:1 / 3;
+
+}
 
     .logo img{
 
