@@ -102,68 +102,67 @@
 
             <form id="contact-form">
 
-                <label for="name">Full Name</label><br>
-                <input id="name"
-                       name="name"
-                       type="text"
-                       placeholder="Your Name"
-                       required><br><br>
+    <label for="name">Full Name</label><br>
+    <input id="name"
+           name="name"
+           type="text"
+           placeholder="Your Name"
+           required><br><br>
 
-                <label for="phone">Phone Number</label><br>
-                <input id="phone"
-                       name="phone"
-                       type="tel"
-                       placeholder="(555) 555-5555"
-                       required><br><br>
+    <label for="phone">Phone Number</label><br>
+    <input id="phone"
+           name="phone"
+           type="tel"
+           placeholder="(555) 555-5555"
+           required><br><br>
 
-                <label for="email">Email</label><br>
-                <input id="email"
-                       name="email"
-                       type="email"
-                       placeholder="Your Email"
-                       required><br><br>
+    <label for="email">Email</label><br>
+    <input id="email"
+           name="email"
+           type="email"
+           placeholder="Your Email"
+           required><br><br>
 
-                <label for="project">Project Type</label><br>
+    <label for="project">Project Type</label><br>
+    <select id="project" name="project">
+        <option>Select a Service</option>
+        <option>Kitchen Remodel</option>
+        <option>Bathroom Remodel</option>
+        <option>Basement Finishing</option>
+        <option>Deck Construction</option>
+        <option>General Remodeling</option>
+        <option>Other</option>
+    </select>
+    <br><br>
 
-                <select id="project" name="project">
+    <label for="source">Where did you hear about us?</label><br>
+    <select id="source" name="source">
+        <option value="">Select an option</option>
+        <option>Google Search</option>
+        <option>Facebook</option>
+        <option>Instagram</option>
+        <option>Referral / Friend</option>
+        <option>Nextdoor</option>
+        <option>Yard Sign</option>
+        <option>Other</option>
+    </select>
+    <br><br>
 
-                    <option>Select a Service</option>
+    <label for="message">Tell Us About Your Project</label><br>
+    <textarea id="message"
+              name="message"
+              placeholder="Briefly describe your project..."></textarea>
+    <br><br>
 
-                    <option>Kitchen Remodel</option>
+    <button id="submit-btn" type="submit">
+        Request Free Estimate
+    </button>
 
-                    <option>Bathroom Remodel</option>
+    <p class="form-note">
+        We'll review your request and contact you as soon as possible.
+    </p>
 
-                    <option>Basement Finishing</option>
-
-                    <option>Deck Construction</option>
-
-                    <option>General Remodeling</option>
-
-                    <option>Other</option>
-
-                </select>
-
-                <br><br>
-
-                <label for="message">Tell Us About Your Project</label><br>
-
-                <textarea id="message"
-                          name="message"
-                          placeholder="Briefly describe your project..."></textarea>
-
-                <br><br>
-
-                <button id="submit-btn" type="submit">
-
-                    Request Free Estimate
-
-                </button>
-
-                <p class="form-note">
-    We'll review your request and contact you as soon as possible.
-</p>
-
-            </form>
+</form>
 
         </div>
 

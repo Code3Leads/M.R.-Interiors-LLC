@@ -15,17 +15,13 @@ if (form) {
         submitBtn.textContent = "Sending...";
 
         const data = {
-
             name: document.getElementById("name").value,
-
             business: "mr-interiors",
-
             phone: document.getElementById("phone").value,
-
+            email: document.getElementById("email").value,
             service: document.getElementById("project").value,
-
+            source: document.getElementById("source").value,   // ← new field
             message: document.getElementById("message").value
-
         };
 
         try {
@@ -34,36 +30,26 @@ if (form) {
                 "https://show-runner-backend.onrender.com/lead",
                 {
                     method: "POST",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify(data)
-
                 }
             );
 
             const result = await response.json();
-
             console.log(result);
 
             submitBtn.textContent = "Request Received!";
+            form.reset();
 
-form.reset();
-
-setTimeout(() => {
-
-    submitBtn.disabled = false;
-
-    submitBtn.textContent = "Request Free Estimate";
-
-}, 3000);
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Request Free Estimate";
+            }, 3000);
 
         } catch (error) {
-
             console.error(error);
-
         }
 
     });
